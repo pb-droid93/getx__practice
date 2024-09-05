@@ -24,6 +24,17 @@ class GetBuilderStateM extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               GetBuilder<SimpleCountController>(
+                  id: "001", //for unique identify
+                  init: SimpleCountController(),
+                  builder: (controller) => Text(
+                        "${controller.count}",
+                        style: const TextStyle(fontSize: 25),
+                      )),
+              const SizedBox(
+                height: 10,
+              ),
+              GetBuilder<SimpleCountController>(
+                  id: "002",
                   init: SimpleCountController(),
                   builder: (controller) => Text(
                         "${controller.count}",
